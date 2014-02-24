@@ -1,8 +1,8 @@
 /*
-  Used to connect xbee sheild to PC.
-  ie, a terminal connection to the xBee via the Arduino acting as a virtual com port.
+  Used to connect xbee module (on shield) to PC.
+  ie, a terminal connection to the xBee via the Arduino acting as a transparent virtual com port.
   
-  Hardware is Arduino Uno with Seeed Studio xBee Sheild v2.
+  Hardware is Arduino Uno with Seeed Studio xBee Shield v2.
   
   Baudrate independent. Baudrate is whatever is set on the xbee. 
   (xBee's default is 9600).
@@ -16,9 +16,9 @@
      -D0 is RX (from PC)
      -D1 is Tx (to PC)
  
-   -xBee serial port (pins are configurable D0-D7, adjust jumpers on sheild to match)
-     -D5 is Rx (from xbee) (XB_TX on sheild, ie xBee's DOUT)
-     -D6 is Tx (to xbee) (XB_RX on sheild, ie xBee's DIN)
+   -xBee serial port (pins are configurable D0-D7, adjust jumpers on shield to match)
+     -D5 is Rx (data coming from xbee) (XB_TX on shield, ie xBee's DOUT)
+     -D6 is Tx (data going to xbee) (XB_RX on shield, ie xBee's DIN)
      
      (D0-D7 restriction is because code below directly accesses PORTD on the ATmega128)
  
